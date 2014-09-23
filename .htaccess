@@ -1,6 +1,12 @@
 <IfModule mod_rewrite.c>
 	RewriteEngine On
 	# needs to be modified for each site
+<<<<<<< HEAD
 	RewriteBase /
 	RewriteRule .* index.html [END]
+=======
+	RewriteBase /public_html/
+	RewriteRule .* index.py [END]
+
+>>>>>>> c00e184c0d88f20c3f6e61260c62b4b3af5c5009
 </IfModule>
