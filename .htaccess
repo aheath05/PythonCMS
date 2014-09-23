@@ -2,7 +2,7 @@
 	RewriteEngine On
 	# needs to be modified for each site
 	RewriteBase /
-	RewriteRule .* index.html [END]
+	RewriteRule .* index.py [END]
 	RewriteBase /public_html/
 	RewriteRule .* index.py [END]
 
