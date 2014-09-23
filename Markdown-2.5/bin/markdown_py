@@ -29,7 +29,7 @@ Copyright 2004 Manfred Stienstra (the original version)
 License: BSD (see docs/LICENSE for details).
 """
 import sys
-sys.path.append('.')
+sys.path.append('/var/www/pythoncms.com/Markdown-2.5')
 if __name__ == '__main__':
     from markdown.__main__ import run
     run()

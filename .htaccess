@@ -1,11 +1,7 @@
-Options +ExecCGI
-AddHandler cgi-script .py
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+	# needs to be modified for each site
+	RewriteBase /public_html/
+	RewriteRule .* index.py [END]
 
-Options +FollowSymLinks
-  RewriteEngine on
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteRule ^([^\.]+)$ $1.html [NC,L]
-  RewriteBase /public_html/
-  RewriteCond %{REQUEST_URI} !^(/.*)+code.py/
-  RewriteRule ^(.*)$ code.py/$1 [PT]
-
+</IfModule>
