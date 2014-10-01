@@ -1,7 +1,5 @@
 <IfModule mod_rewrite.c>
 	RewriteEngine On
-	#RewriteBase /
-	#RewriteRule .* index.py [L]
-	#RewriteBase /public_html/
-	#RewriteRule .* index.py [L]
+	RewriteBase /
+	RewriteRule .* index.py [END]
 </IfModule>
