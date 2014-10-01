@@ -29,7 +29,7 @@ def parse_options(args=None, values=None):
     ver = "%%prog %s" % markdown.version
     
     parser = optparse.OptionParser(usage=usage, description=desc, version=ver)
-    parser.add_option("-f", "--file", dest="filename", default=None,
+    parser.add_option("-f", "--file", dest="filename", default=sys.stdout,
                       help="Write output to OUTPUT_FILE. Defaults to STDOUT.",
                       metavar="OUTPUT_FILE")
     parser.add_option("-e", "--encoding", dest="encoding",
