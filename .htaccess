@@ -2,12 +2,4 @@
 	RewriteEngine On
 	RewriteBase /
 	RewriteRule .* index.py [END]
-
-	# needs to be modified for each site
-	RewriteBase /
-	RewriteRule .* index.py [END]
-	RewriteBase /public_html/
-	RewriteRule .* index.py [END]
-
-
 </IfModule>
