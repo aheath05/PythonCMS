@@ -1,5 +1,6 @@
+DirectoryIndex index.py
 <IfModule mod_rewrite.c>
 	RewriteEngine On
 	RewriteBase /
-	RewriteRule .* index.py [END]
+	RewriteRule (.*)\.(php|md|html|py)$ index.py [END]
 </IfModule>

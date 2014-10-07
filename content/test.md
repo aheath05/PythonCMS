@@ -1,4 +1,4 @@
-Welcome to Blue
+Welcome to Blue2
 =========
 Lightweight, easy to use, Python Based CMS
 -----------------------------------------
