@@ -43,7 +43,7 @@ dir_bool = False
 site_path = req_uri.replace(cont_prefix, "", 1)
 
 
-for dir_entry in os.listdir(path):
+for dir_entry in os.listdir(site_path):
   dir_entry = "/%s" % (dir_entry)
   if site_path == dir_entry:
     dir_bool = True
