@@ -48,12 +48,6 @@ for dir_entry in os.listdir(site_path):
   if site_path == dir_entry:
     dir_bool = True
     break
-
-if dir_bool == True and dir_entry.endswith('.css'):
-  f = open("content"+dir_entry, 'r')
-  file_content = f.read()
-  print(file_content)
-  f.close()
  
 if site_path == "/":
   f = open("content/index.html")
