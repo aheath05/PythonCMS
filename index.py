@@ -32,7 +32,8 @@ print
 print "<html>"
 print "        <title>Blue CMS</title>" 
 print "        <link rel='stylesheet' type='text/css' href='/content/css/home.css' />" 
-
+#print "        <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>"
+#print "        <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css'>"
    
 req_uri = os.environ["REQUEST_URI"]
 cont_prefix = os.environ["CONTEXT_PREFIX"]
