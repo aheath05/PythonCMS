@@ -5,33 +5,16 @@
 import cgitb
 import os, sys
 import urllib2
-import get_markdown
+
 from StringIO import StringIO
 cgitb.enable()
-
-def md2html(filename):
-
-	sys.path.append('Markdown-2.5')
-	old_stdout = sys.stdout
-	#sys.stdout = open('out.html', 'w')
-	result = StringIO()
-	sys.stdout = result
-
-
-	if __name__ == '__main__':
-	    sys.argv.append(filename)
-	    from markdown.__main__ import run
-	    run()
-
-	sys.stdout = old_stdout
-	result_string = result.getvalue()
-	print result_string
+from get_markdown import md2html
 
 print "Content-Type: text/html;charset=utf-8"
 print
 print "<html>"
 print "        <title>Blue CMS</title>" 
-print "        <link rel='stylesheet' type='text/css' href='/content/css/home.css' />" 
+print "        <link rel='stylesheet' type='text/css' href='/content/css/home2.css' />" 
 #print "        <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>"
 #print "        <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css'>"
    
@@ -60,8 +43,8 @@ if site_path == "/":
 elif dir_bool == True and dir_entry.endswith('.md'):
   filename = "content"+dir_entry
   #print filename
-  content = md2html("content"+dir_entry)
- # print content
+  content = get_markdown.md2html("content"+dir_entry)
+  print content
 elif dir_bool == True:
   f = open("content"+dir_entry, 'r')
   file_contents = f.read()

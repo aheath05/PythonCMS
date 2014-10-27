@@ -1,9 +1,11 @@
 #!/usr/bin/env python
 # enable debugging
 
-import sys
-import os
+import cgitb
+import os, sys
+import urllib2
 from StringIO import StringIO
+cgitb.enable()
 
 def md2html(filename):
 
