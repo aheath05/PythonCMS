@@ -1,0 +1,12 @@
+.logo{
+	height: 150%;
+	margin-top: -0.8em;
+	position: relative;
+}
+.sidebar-a{
+	width: 15%;
+	margin: 25px;
+	/* height: inherit; */
+	min-height: 350%;
+	float: right;
+}
