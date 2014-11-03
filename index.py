@@ -5,19 +5,44 @@
 import cgitb
 import os, sys
 import urllib2
+import get_markdown
+import modules
 
 from StringIO import StringIO
 cgitb.enable()
-from get_markdown import md2html
+
+
+def md2html(filename):
+
+	sys.path.append('Markdown-2.5')
+	old_stdout = sys.stdout
+	#sys.stdout = open('out.html', 'w')
+	result = StringIO()
+	sys.stdout = result
+
+
+	if __name__ == '__main__':
+	    sys.argv.append(filename)
+	    from markdown.__main__ import run
+	    run()
+
+	sys.stdout = old_stdout
+	result_string = result.getvalue()
+	print result_string
+
 
 print "Content-Type: text/html;charset=utf-8"
 print
 print "<html>"
+
 print "        <title>Blue CMS</title>" 
-print "        <link rel='stylesheet' type='text/css' href='/content/css/home2.css' />" 
-#print "        <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>"
-#print "        <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css'>"
-   
+print "		<meta name='viewport' content='width=device-width, initial-scale=1'>"
+print "        <link rel='stylesheet' href='home/default.css' />" 
+print "        <link rel='stylesheet' href='home/main.css' >"
+print "        <link rel='stylesheet' href='home/responsive.css' media='screen' >"
+# call the header and sidebar
+modules.header()
+modules.sidebar()
 req_uri = os.environ["REQUEST_URI"]
 cont_prefix = os.environ["CONTEXT_PREFIX"]
 path = r'/var/www/pythoncms.com/content'
@@ -42,9 +67,9 @@ if site_path == "/":
 #  urllib2.urlopen("http://pythoncms.com/content"+dir_entry)
 elif dir_bool == True and dir_entry.endswith('.md'):
   filename = "content"+dir_entry
-  #print filename
-  content = get_markdown.md2html("content"+dir_entry)
-  print content
+  print filename
+  md2html("/var/www/pythoncms.com/content"+dir_entry)
+  #print content
 elif dir_bool == True:
   f = open("content"+dir_entry, 'r')
   file_contents = f.read()
@@ -60,5 +85,7 @@ else:
       
 #for param in os.environ.  keys():
 #  print "<p><b>%20s</b>: %s</p>" % (param, os.environ[param])
-                 
+
+#call the footer
+modules.footer()                
 print "</html>"
