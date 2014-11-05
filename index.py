@@ -67,7 +67,6 @@ if site_path == "/":
 #  urllib2.urlopen("http://pythoncms.com/content"+dir_entry)
 elif dir_bool == True and dir_entry.endswith('.md'):
   filename = "content"+dir_entry
-  print filename
   md2html("/var/www/pythoncms.com/content"+dir_entry)
   #print content
 elif dir_bool == True:
