@@ -26,8 +26,3 @@ def sidebar():
 	f = open('content/modules/sidebar-a.html', 'r')
 	for line in f:
 		print line,
-
-def modules():
-	header()
-	sidebar()
-	

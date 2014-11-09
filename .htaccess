@@ -1,6 +1,14 @@
 DirectoryIndex index.py
+
 <IfModule mod_rewrite.c>
 	RewriteEngine On
 	RewriteBase /
+	RewriteRule home(.main)\.(css)$ home/main.css [PT]
+	RewriteRule home(.responsive)\.(css)$ home/responsive.css [PT]
+	RewriteRule (.*)\.(css)$ home/default.css [PT]
+	RewriteRUle content/images/(.*) - [PT]
+	RewriteRule content(\/.*)? index.py [END]
 	RewriteRule (.*)\.(php|md|html|py)$ index.py [END]
+	RewriteRule .*  \/ [END]
 </IfModule>
+
