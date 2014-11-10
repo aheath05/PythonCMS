@@ -31,7 +31,7 @@ In the meantime, this is our page.</code></p>
 <h2>License</h2>
 <p>2014 PythonCMS Blue Team</p>
 <hr />
-<img src="content/images/yes.jpg">
+<img src="/content/images/yes.jpg">
 <p><strong>You reached our home page, Heck Yeah!</strong></p>
 </body>
 </html>

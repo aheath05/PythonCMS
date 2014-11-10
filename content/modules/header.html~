@@ -12,11 +12,7 @@
       <li><a href="/">Home</a></li>
       <li><a href="test2.md">Link</a></li>
       <li><a href="test3.md">Another link</a></li>
-          <li class="divider"></li>
-          <li class="dropdown-header">Dropdown header</li>
-          <li><a href="#">Separated link</a></li>
-          <li><a href="#">One more separated link</a></li>
-        </ul>
+    </ul>
       </li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
