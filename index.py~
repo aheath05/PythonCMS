@@ -75,7 +75,7 @@ elif dir_bool == True:
   print (file_contents)
   f.close()
 else:
-  print "<h5>    <em style='color:#2F7288; animation: blinker 1.7s cubic-bezier(.5, 0, 1, 1) infinite alternate; '>(The link you requested either does not exist or you do not have permission to access it. Better luck next time!)    </em></h5>"
+  print "<h5>    <em style='color:#2F7288; '>(The link you requested either does not exist or you do not have permission to access it. Better luck next time!)    </em></h5>"
   f = open("content/index.md")
   file_contents = f.read()
   print (file_contents)

@@ -11,19 +11,19 @@ cgitb.enable()
 def header():
 
 
-	f = open('content/modules/header.html', 'r')
+	f = open('modules/header.html', 'r')
 	for line in f:
         	print line,
 
 def footer():
 
-	f = open('content/modules/footer.html', 'r')
+	f = open('modules/footer.html', 'r')
 	for line in f:
         	print line,
 
 	
 def sidebar():
-	f = open('content/modules/sidebar-a.html', 'r')
+	f = open('modules/sidebar-a.html', 'r')
 	for line in f:
 		print line,
 

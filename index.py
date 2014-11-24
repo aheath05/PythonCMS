@@ -5,7 +5,6 @@
 import cgitb
 import os, sys
 import urllib2
-import get_markdown
 import modules
 
 from StringIO import StringIO

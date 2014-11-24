@@ -23,8 +23,34 @@
 </ul>
 <hr />
 <h2>Installation</h2>
-<p><code>maybe an example of how to install this thing. 
-In the meantime, this is our page.</code></p>
+<h5># Installation
+
+*    Using FTP (we used filezilla on windows) move the zipped installation folder into your /var/www/ directory. <br>
+
+
+*    You will need to get unzip in order to unzip the folder.  <br>
+
+
+*    On the command line type `(sudo) apt-get install zip unzip`<br>
+
+
+*    Now `cd /var/www`<br>
+
+
+*    Use the command `ls` if you want to see the installation zip file<br>
+
+
+*    Now type: `unzip pythonCMS.zip`<br>
+
+*    Now you should be able to ls and see the unzipped cms<br>
+
+
+*    You will need to change the access of the files in the CMS:
+`sudo chmod -R a+x`
+<br>
+
+*    You will also need to enable CGI:
+`sudo a2enmod cgi`<br></h5>
 <hr />
 <h5>Checkout our <a href="https://github.com/aheath05/pythoncms.com">Github</a></h5>
 <hr />
