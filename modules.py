@@ -23,7 +23,7 @@ def footer():
 
 	
 def sidebar():
-	f = open('modules/sidebar-a.html', 'r')
+	f = open('modules/sidebar.html', 'r')
 	for line in f:
 		print line,
 
