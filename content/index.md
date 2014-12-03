@@ -5,17 +5,6 @@
 <body>
 <h1>Welcome to Blue</h1>
 <h2>Lightweight, easy to use, Python Based CMS</h2>
-<p>Created by:</p>
-<blockquote>
-<ul>
-<li>Alicia Heath</li>
-<li>Kyler Moore</li>
-<li>Raj Patel</li>
-<li>and Ryan Wegner</li>
-</ul>
-</blockquote>
-<h2>Version</h2>
-<p>1.0</p>
 <h2>Tech</h2>
 <p>Blue uses:</p>
 <ul>
@@ -23,34 +12,27 @@
 </ul>
 <hr />
 <h2>Installation</h2>
-<h5># Installation
+<h5>
 
-*    Using FTP (we used filezilla on windows) move the zipped installation folder into your /var/www/ directory. <br>
+* Install the PythonCMS
+  * Move the `PythonCMS.zip` file to `/var/www/`  
+  ```console
+  sudo mv PythonCMS.zip /var/www
+  ```
 
+  * Unzip the package  
+  ```console
+  sudo unzip PythonCMS.zip
+  ```
 
-*    You will need to get unzip in order to unzip the folder.  <br>
+  * Rename the `PythonCMS` folder to the same name used for the `DocumentRoot` in the `001-name of website directory.conf`.
+  * Make sure permission are correct  
+  ```console
+  sudo chmod -R a+x name of directory
+  ```
 
-
-*    On the command line type `(sudo) apt-get install zip unzip`<br>
-
-
-*    Now `cd /var/www`<br>
-
-
-*    Use the command `ls` if you want to see the installation zip file<br>
-
-
-*    Now type: `unzip pythonCMS.zip`<br>
-
-*    Now you should be able to ls and see the unzipped cms<br>
-
-
-*    You will need to change the access of the files in the CMS:
-`sudo chmod -R a+x`
-<br>
-
-*    You will also need to enable CGI:
-`sudo a2enmod cgi`<br></h5>
+  * Test the CMS out by navigating to the domain name in your browser. If you are confident it works you may delete the `PythonCMS.zip` file and continue to create your website using the PythonCMS tool.
+</h5>
 <hr />
 <h5>Checkout our <a href="https://github.com/aheath05/pythoncms.com">Github</a></h5>
 <hr />
